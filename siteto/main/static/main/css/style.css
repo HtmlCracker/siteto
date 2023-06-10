@@ -1,0 +1,19 @@
+body {
+    margin: 0 0;
+}
+
+.all_letters {
+    text-align: center;
+    margin-top: 20%;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.letters {
+    position: relative;
+    display: inline-block;
+    font-weight: 1000;
+    width: 35px;
+    text-align: center;
+}
