@@ -1,5 +1,8 @@
 var word_list = ['быстро', 'красиво', 'безопасно'];
-var sighn_list = ['-', '=', '#', '@', '!', '/', '$', '%', '(', '{', '}', '&', '<', 'Ђ', '*', '^']
+var sighn_list = ['-', '=', '#', '@', '!', '/', '$',
+                 '%', '(', '{', '}', '&', '<', 'Ђ',
+                 '*', '^', 'ɣ', '尸', '日', '力', '大']
+
 function sleep(ms)
 {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -26,7 +29,7 @@ function findLongestWord(lst)
         }
     }
     return longestWord;
-  }
+}
 
 let count = 0;
 
@@ -66,7 +69,6 @@ function new_div(word, trying)
         else {
             $(`#${i}`).css('display', 'none');
         }
-        
     };
 };
 
@@ -96,7 +98,7 @@ $(async function()
                 {
                     break;
                 } else {
-                    await sleep(120);
+                    await sleep(90);
                     new_div(rand_sighn(word_list[word_ind]), trying);
                 }
             };

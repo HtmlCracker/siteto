@@ -6,5 +6,5 @@ def index(request):
     return render(request, 'main/index.html')
 
 
-def case(request):
-    return HttpResponse("<h1>Case</h1>")
+def port(request):
+    return render(request, 'main/portfolio.html')
