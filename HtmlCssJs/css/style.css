@@ -16,3 +16,36 @@ body {
     width: 35px;
     text-align: center;
 }
+
+.about {
+    font-size: 30px;
+    padding-top: 78px;
+    margin-left: 13%;
+
+    animation-name: left_block;
+    animation-duration: 0.750s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes left_block {
+    0%{
+        margin-left: 13%;
+    }
+    100%{
+        margin-left: 30%;
+    }
+}
+
+@keyframes back_block {
+    0%{
+        margin-left: 30%;
+    }
+    100%{
+        margin-left: 13%;
+    }
+}
+
+.siteto-logo {
+    position: absolute;
+}
