@@ -1,12 +1,65 @@
 body {
     margin: 0 0;
+    letter-spacing: 1px;
+    font-family: 'BIZ UDPMincho';
+}
+
+.header-nav {
+    background-color: #6640B2;
+    width: 100%;
+    height: 8vh;
+}
+
+.header-nav ul {
+    text-align: right;
+    margin: 0;
+}
+
+.header-list li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 5%;
+    font-size: 23px;
+    margin-top: 1.6vh;
+    font-weight: lighter;
+}
+
+.header-list li a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.siteto-img {
+    position: absolute;
+    width: 25%;
+    left: 2.2%;
+}
+
+span {
+    padding-right: 10px;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.about {
+    position: relative;
+    z-index: -1;
+    top: 10vh;
+    margin-left: 10%;
+    font-size: 33px;
+}
+
+.img-about {
+    padding-bottom: 20vh;
 }
 
 .all_letters {
     text-align: center;
-    font-size: 36px;
+    font-size: 30px;
+    margin-top: 33vh;
     width: 100%;
-    height: 100%;
+    height: 40px;
 }
 
 .letters {
@@ -15,37 +68,4 @@ body {
     font-weight: 1000;
     width: 35px;
     text-align: center;
-}
-
-.about {
-    font-size: 30px;
-    padding-top: 78px;
-    margin-left: 13%;
-
-    animation-name: left_block;
-    animation-duration: 0.750s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-@keyframes left_block {
-    0%{
-        margin-left: 13%;
-    }
-    100%{
-        margin-left: 30%;
-    }
-}
-
-@keyframes back_block {
-    0%{
-        margin-left: 30%;
-    }
-    100%{
-        margin-left: 13%;
-    }
-}
-
-.siteto-logo {
-    position: absolute;
 }

@@ -3,6 +3,7 @@ var sighn_list = ['-', '=', '#', '@', '!', '/', '$',
                  '%', '(', '{', '}', '&', '<', 'Ђ',
                  '*', '^', 'ɣ']
 
+
 function sleep(ms)
 {
     return new Promise(resolve => setTimeout(resolve, ms));

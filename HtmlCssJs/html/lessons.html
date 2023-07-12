@@ -2,39 +2,39 @@
 <html lang="ru-RU">
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width">
    <link rel="stylesheet" href="../css/style.css">
+   <link href='https://fonts.googleapis.com/css?family=BIZ UDPMincho' rel='stylesheet'>
    <script src="../js/jquery-3.7.0.min.js"></script>
    <script src="../js/main.js"></script>
-   <script src="../js/second.js"></script>
+   <script src="../js/hover_scroll.js"></script>
    <title>SITETO</title>
 </head>
 <body>
 
    <header>
-      <nav>
-         <ul>
-         <li><a href="#О нас">О нас</a></li>
-         <li><a href="#Портфолио">Портфолио</a></li>
-         <li><a href="#Контакты">Контакты</a></li>
-      </ul>
+      <nav class="header-nav">
+        <ul class="header-list">
+            <li><a class="header-link" id="about_link">О НАС</a></li>
+            <li><a class="header-link" id="portf_link">ПОРТФОЛИО</a></li>
+            <li><a class="header-link" id="cont_link">КОНТАКТЫ</a></li>
+        </ul>
       </nav>
    </header>
    <main>
-      <section>
-         <p>
-            <img
-            class="siteto-logo"
+      <section class="img-about">
+         <p class="img-p">
+            <img class="siteto-img"
             src="../imgs/logo_siteto.svg"
             alt="лого"
             title="SITETO">
          </p>
-         <p class="about">Наше описание</p>
+         <p class="about"><span>-</span>Наше описание</p>
          <div class="all_letters">
          </div>
       </section>
       <section>
-         <h1 id="О нас">О нас</h1>
+         <h1 id="about">О нас</h1>
          <h2>Описание о нас</h2>
          <p>Текст</p>
          <h2>Возможности</h2>
@@ -43,11 +43,11 @@
          <p>Текст</p>
       </section>
       <section>
-         <h1 id="Портфолио">Портфолио</h1>
+         <h1 id="portf">Портфолио</h1>
       </section>
    </main>
    <footer>
-      <h2 id="Контакты">Контакты</h2>
+      <h2 id="cont">Контакты</h2>
       <p>почта</p>
       <ul>
          <li><a href="#">
