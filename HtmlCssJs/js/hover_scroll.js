@@ -4,11 +4,12 @@ function sleep(ms) {
 
 $(async function() {
     var name_div = $('.about');
+    var line = $('.under-line');
     name_div.animate({'margin-left': '30%'}, 500);
     await sleep(500);
 
     var links = {
-        'about_link': '#about',
+        'about_link': '#about_us-header',
         'portf_link': '#portf',
         'cont_link': '#cont'
     }
@@ -16,6 +17,7 @@ $(async function() {
     $(".header-link").hover(
         function () {
             $(this).css('color', 'rgb(222, 222, 222)');
+            line.animate({'left': $(this).offset().left, 'width': $(this).width()}, 300);
         }, function () {
             $(this).css('color', 'white');
         }
