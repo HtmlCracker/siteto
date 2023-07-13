@@ -1,7 +1,7 @@
 body {
     margin: 0 0;
     letter-spacing: 1px;
-    font-family: 'BIZ UDPMincho';
+    font-family: 'Inter', sans-serif;
 }
 
 .header-nav {
@@ -33,13 +33,13 @@ body {
 .siteto-img {
     position: absolute;
     width: 25%;
-    left: 2.2%;
+    left: 4%;
 }
 
 span {
     padding-right: 10px;
     font-weight: 500;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .about {
@@ -68,4 +68,29 @@ span {
     font-weight: 1000;
     width: 35px;
     text-align: center;
+}
+/*-----ABOUT-US-----------------------------------------------------------------------------------*/
+#about_us {
+    background-color: #D9D9D9;
+    padding-bottom: 7vh;
+}
+#about_us-header {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 152.5%;
+    text-align: center;
+    padding-top: 7vh;
+    padding-bottom: 3vh;
+}
+.about_us-block {
+    margin-left: 4%;
+    margin-right: 10%;
+}
+.about_us-block:not(:last-child) {
+    margin-bottom: 10vh;
+}
+.about_us-subtitle {
+    font-size: 33px;
+    font-weight: 400;
+    margin-bottom: 2vh;
 }
