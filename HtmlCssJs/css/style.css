@@ -36,8 +36,8 @@ body {
     width: 200px;
     left: -200px;
     top: calc(8vh - 5px);
-    background-color: rgb(195, 45, 157);
-    box-shadow: -8px 2px 22px -8px #6640B2 inset, 8px 2px 22px -8px #6640B2 inset;
+    background-color: rgb(222, 34, 175);
+    box-shadow: -7px 1px 22px -7px #6640B2 inset, 7px 1px 22px -7px #6640B2 inset;
 }
 
 .siteto-img {
@@ -64,9 +64,12 @@ span {
     font-size: 33px;
 }
 
-.img-about {
-    padding-bottom: 38vh;
+.img-p {
+    margin: 0;
+}
 
+.img-about {
+    height: 92vh;
 }
 
 .all_letters {
@@ -90,6 +93,7 @@ span {
     padding-bottom: 2vh;
 }
 #about_us-header {
+    margin-top: 0;
     font-weight: 600;
     font-size: 40px;
     line-height: 152.5%;
