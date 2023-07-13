@@ -86,9 +86,7 @@ span {
     margin-left: 4%;
     margin-right: 10%;
 }
-.about_us-block:not(:last-child) {
-    margin-bottom: 10vh;
-}
+
 .about_us-subtitle {
     font-size: 33px;
     font-weight: 400;
