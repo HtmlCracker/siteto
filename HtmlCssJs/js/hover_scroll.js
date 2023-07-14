@@ -3,9 +3,7 @@ function sleep(ms) {
 }
 
 $(async function() {
-    var name_div = $('.about');
     var line = $('.under-line');
-    name_div.animate({'margin-left': '30%'}, 500);
     await sleep(500);
 
     var links = {
@@ -17,7 +15,7 @@ $(async function() {
     $(".header-link").hover(
         function () {
             $(this).css('color', 'rgb(222, 222, 222)');
-            line.animate({'left': $(this).offset().left, 'width': $(this).width()}, 300);
+            line.animate({'left': $(this).offset().left, 'width': $(this).width()}, 250);
         }, function () {
             $(this).css('color', 'white');
         }
@@ -28,28 +26,3 @@ $(async function() {
     });
 
 });
-
-var pos = 'down';
-
-$(window).scroll(async function(){
-    var name_div = $('.about');
-    var scrolled = $(window).scrollTop();
-    var height = $(window).height();
-
-    var count = 0
-    
-    if (scrolled < height/4) {
-        if (pos == 'down') {
-            name_div.animate({'margin-left': '30%'}, 500);
-            pos = 'top';
-            console.log(pos);
-        }
-
-    } else if (scrolled >= height/4) {
-        if (pos == 'top') {
-            name_div.animate({'margin-left': '10%'}, 500);
-            pos = 'down';
-            console.log(pos);
-        }
-    }
-})
