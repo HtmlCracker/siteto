@@ -4,8 +4,7 @@ var sighn_list = ['-', '=', '#', '@', '!', '/', '$',
                  '*', '^', 'ɣ']
 
 
-function sleep(ms)
-{
+const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
