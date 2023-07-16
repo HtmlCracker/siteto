@@ -2,7 +2,7 @@ const sleep_ms = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-$(async function() {
+$(async () => {
     var line = $('.under-line');
     var is_line_left = true;
 
@@ -31,7 +31,7 @@ $(async function() {
         }
     );
 
-    $('.header-link').on('click', function() {
+    $('.header-link').on('click', function () {
         $('html, body').animate({ scrollTop: $(links[this.id]).offset().top }, 350);
     });
 
@@ -39,7 +39,7 @@ $(async function() {
 
 var count_scroll_second = 0;
 
-$(window).scroll(async function(){
+$(window).scroll(async () =>{
     var scrolled = $(window).scrollTop();
     const second_block_elem = [$('#first-block'), $('#second-block'), $('#third-block')];
 
