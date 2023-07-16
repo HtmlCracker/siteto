@@ -121,11 +121,11 @@ span {
 }
 
 footer {
+    padding-top: 2vh;
+    height: 11vh;
     background-color: #6640B2;
     margin: 0 auto;
     text-align: center;
-    padding-top: 25px;
-
 }
 
 footer a{
@@ -139,16 +139,27 @@ footer a{
     margin-left: 10px;
     margin-bottom: 10px;    
 }
+
 .icons{
     text-align: center;
     list-style-type: none;
     display: inline;
     margin: 10px;
+}
 
-}
 #email {
-    padding-right: 50%;
-    
+    padding-right: 35%;
+    margin-top: calc(10vh/2);
+    float: left;
 }
-#email a 
-{ text-decoration: none; }
+
+#email a {
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.footer-ul {
+    height: 11vh;
+    margin: 0;
+    padding: 0;
+}
