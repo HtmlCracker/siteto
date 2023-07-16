@@ -50,6 +50,5 @@ $(window).scroll(async () =>{
             await sleep_ms(200);
         }
         count_scroll_second = 1;
-
     }
 });

@@ -91,10 +91,12 @@ span {
 }
 /*-----ABOUT-US-----------------------------------------------------------------------------------*/
 #about_us {
+    padding-top: 10vh;
     background-color: #D9D9D9;
-    padding-bottom: 2vh;
+    padding-bottom: 10vh;
     height: 100vh;
 }
+
 #about_us-header {
     margin-top: 0;
     font-weight: 600;
@@ -104,6 +106,7 @@ span {
     padding-top: 7vh;
     padding-bottom: 3vh;
 }
+
 .about_us-block {
     margin-left: 4%;
     margin-right: 10%;

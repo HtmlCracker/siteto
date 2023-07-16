@@ -3,7 +3,6 @@ const sighn_list = ['-', '=', '#', '@', '!', '/', '$',
                  '%', '(', '{', '}', '&', '<', 'Ђ',
                  '*', '^', 'ɣ']
 
-
 const sleep = (ms) => { return new Promise(resolve => setTimeout(resolve, ms)); }
 
 const choose = () => {
@@ -18,10 +17,8 @@ const randomInteger = (min, max) => {
 
 const findLongestWord = (lst) => {
     var longestWord = 0;
-    for(var i = 0; i < lst.length; i++)
-    {
-        if (lst[i].length > longestWord)
-        {
+    for(var i = 0; i < lst.length; i++) {
+        if (lst[i].length > longestWord){
         longestWord = lst[i].length;
         }
     }
