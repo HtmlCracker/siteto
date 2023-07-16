@@ -93,6 +93,7 @@ span {
 #about_us {
     background-color: #D9D9D9;
     padding-bottom: 2vh;
+    height: 100vh;
 }
 #about_us-header {
     margin-top: 0;
@@ -107,6 +108,7 @@ span {
     margin-left: 4%;
     margin-right: 10%;
     margin-bottom: 12vh;
+    display: none;
 }
 
 .about_us-subtitle {
