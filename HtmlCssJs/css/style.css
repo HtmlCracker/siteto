@@ -119,3 +119,36 @@ span {
     font-weight: 400;
     margin-bottom: 2vh;
 }
+
+footer {
+    background-color: #6640B2;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 25px;
+
+}
+
+footer a{
+    color:white;
+    font-size: 4vh;
+    text-align: center;
+    vertical-align: middle;
+}
+.social img{
+    height: 80px;
+    margin-left: 10px;
+    margin-bottom: 10px;    
+}
+.icons{
+    text-align: center;
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+
+}
+#email {
+    padding-right: 50%;
+    
+}
+#email a 
+{ text-decoration: none; }

@@ -9,8 +9,8 @@ $(async () => {
     var links = {
         'about_link': '#about_us-header',
         'portf_link': '#portf',
-        'cont_link': '#cont'
-    }
+        'cont_link': 'footer'
+    };
 
     $(".header-link").hover(
         function () {
@@ -50,5 +50,5 @@ $(window).scroll(async () =>{
             await sleep_ms(200);
         }
         count_scroll_second = 1;
-    }
+    };
 });
