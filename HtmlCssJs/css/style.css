@@ -121,8 +121,8 @@ span {
 }
 /*-----FOOTER----------------------------------------------------------------------------------*/
 footer {
-    padding-top: 2vh;
-    height: 11vh;
+    padding-top: 2.5vh;
+    padding-bottom: 1vh;
     background-color: #6640B2;
     margin: 0 auto;
     text-align: center;
@@ -130,14 +130,12 @@ footer {
 
 footer a{
     color:white;
-    font-size: 4vh;
     text-align: center;
     vertical-align: middle;
 }
 .social img{
-    height: 80px;
+    height: 10vh;
     margin-left: 10px;
-    margin-bottom: 10px;    
 }
 
 .icons{
@@ -145,11 +143,12 @@ footer a{
     list-style-type: none;
     display: inline;
     margin: 10px;
+    margin-top: 2vh;
 }
 
 #email {
-    padding-right: 35%;
-    margin-top: calc(10vh/2);
+    padding-right: 45%;
+    margin-left: 3%;
     float: left;
 }
 
@@ -159,7 +158,8 @@ footer a{
 }
 
 .footer-ul {
-    height: 11vh;
+    font-size: 4vh;
+    height: 12vh;
     margin: 0;
     padding: 0;
 }
