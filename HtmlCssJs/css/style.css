@@ -32,10 +32,10 @@ body {
 
 .under-line {
     position: absolute;
-    height: 5px;
+    height: 0.6vh;
     width: 200px;
     left: -200px;
-    top: calc(8vh - 5px);
+    top: calc(8vh - 0.6vh);
     background-color: #d2c7e8;
     box-shadow: -7px 1px 22px -7px #6640B2 inset, 7px 1px 22px -7px #6640B2 inset;
 }
