@@ -24,7 +24,7 @@ $(async () => {
 
     $('.img-about, body').hover(
         function () {
-            if (is_line_left == false) {
+            if (!(is_line_left)) {
                 line.animate({'left': '-200px'}, 350);
                 is_line_left = true;
             }
@@ -45,8 +45,8 @@ $(window).scroll(async () =>{
 
     
     if (scrolled >= $('#about_us-header').offset().top - 100 & count_scroll_second == 0) {
-        for (let i = 0; i < second_block_elem.length; i++) {
-            second_block_elem[i].fadeIn(200);
+        for (const el of second_block_elem) {
+            el.fadeIn(200);
             await sleep_ms(200);
         }
         count_scroll_second = 1;
