@@ -1,7 +1,3 @@
-const sleep_ms = (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 $(async () => {
     var line = $('.under-line');
     var is_line_left = true;
@@ -47,7 +43,7 @@ $(window).scroll(async () =>{
     if (scrolled >= $('#about_us-header').offset().top - 100 & count_scroll_second == 0) {
         for (const el of second_block_elem) {
             el.fadeIn(200);
-            await sleep_ms(200);
+            await sleep(200);
         }
         count_scroll_second = 1;
     };
