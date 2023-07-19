@@ -4,7 +4,7 @@ $(async () => {
 
     var links = {
         'about_link': '#about_us-header',
-        'portf_link': '#portf',
+        'portf_link': '.portf-h1-div',
         'cont_link': 'footer'
     };
 
