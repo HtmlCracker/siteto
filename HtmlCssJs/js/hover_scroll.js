@@ -4,13 +4,24 @@ visible_animation = async (name) => {
 }
 
 animation_lines = async () => {
-    const lines_dict = {
-        '.line1': ['27.6%', '#box-2'],
-        '.line2': ['60.8%', '#box-3'],
-        '.vert-line3': ['37vh', '#box-6'],
-        '.line4': ['60.8%', '#box-5'],
-        '.line5': ['27.6%', '#box-4'],
-    };
+    var lines_dict = {};
+    if ($('.line3').css('width') == '1.5px') {
+        lines_dict = {
+            '.line1': ['27.6%', '#box-2'],
+            '.line2': ['60.8%', '#box-3'],
+            '.line3': ['43vh', '#box-6'],
+            '.line4': ['60.8%', '#box-5'],
+            '.line5': ['27.6%', '#box-4'],
+        };
+    } else {
+        lines_dict = {
+            '.line1': ['45%', '#box-2'],
+            '.line2': ['54vh', '#box-4'],
+            '.line3': ['45%', '#box-3'],
+            '.line4': ['81vh', '#box-5'],
+            '.line5': ['45%', '#box-6'],
+        };
+    }
 
     await visible_animation('#box-1');
 
@@ -18,7 +29,7 @@ animation_lines = async () => {
         
         $(key).css('background-color', '#6640B2')
 
-        if (key[1] == 'v') {
+        if ($(key).css('width') == '1.5px') {
             $(key).animate({'top': lines_dict[key][0]}, 500)
         } else {
             $(key).animate({'left': lines_dict[key][0]}, 500)
@@ -40,8 +51,6 @@ $(async () => {
         'portf_link': '.portf-h1-div',
         'cont_link': 'footer'
     };
-
-    animation_lines();
 
     $(".header-link").hover(
         function () {
@@ -69,6 +78,7 @@ $(async () => {
 });
 
 var count_scroll_second = 0;
+var count_portf = 0;
 
 $(window).scroll(async () =>{
     var scrolled = $(window).scrollTop();
@@ -82,4 +92,9 @@ $(window).scroll(async () =>{
         }
         count_scroll_second = 1;
     };
+    if (scrolled >= $('.portf-h1-div').offset().top - 100 & count_portf == 0) {
+        count_portf++;
+
+        animation_lines();
+    }
 });

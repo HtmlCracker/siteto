@@ -166,7 +166,7 @@ span {
 .line1, .line2 {
     z-index: -1;
     position: relative;
-    top: 24.3vh;
+    top: 30.3vh;
     height: 1.5px;
     width: 11.2%;
     background-color: black;
@@ -192,20 +192,20 @@ span {
     background-color: white;
 }
 
-.vert-line3 {
+.line3 {
     z-index: -1;
     position: relative;
     top: 30vh;
     width: 1.5px;
     left: 83%;
-    height: 6.8vh;
+    height: 11vh;
     background-color: white;
 }
 
 .line4, .line5 {
     z-index: -1;
     position: relative;
-    top: 50vh;
+    top: 56vh;
     height: 1.5px;
     width: 11.2%;
 }
@@ -221,7 +221,7 @@ span {
 .portfolio-block {
     visibility: hidden;
     display: flex;
-    margin: 3vh 5.5%;
+    margin: 5vh 5.5%;
     flex-wrap: wrap;
     height: 27vh;
     width: 22%;
@@ -273,4 +273,55 @@ footer a{
     height: 12vh;
     margin: 0;
     padding: 0;
+}
+
+
+@media screen and (max-width: 955px) {
+    .all-portf {
+        margin-left: 13.5%;
+    }
+
+    .portfolio-block {
+        width: 30%;
+        margin: 5vh 6%;
+    }
+
+
+    .line1 {
+        top: 40vh;
+    }
+
+    .line1, .line5 {
+        left: calc(45% - 11.2%);
+    }
+
+    .line3 {
+        left: calc(45% + 11.2%);
+    }
+    
+    .line5 {
+        top: 93vh;
+    }
+    
+    .line2 {
+        left: 68.5%;
+        height: 11vh;
+        width: 1.5px;
+        top: 44vh;
+    }
+    
+    .line4 {
+        left: 31.5%;
+        top: 70vh;
+        width: 1.5px;
+        height: 11vh;
+    }
+    
+    .line3 {
+        position: relative;
+        height: 1.5px;
+        width: 11.2%;
+        top: 66vh;
+    }
+    
 }
