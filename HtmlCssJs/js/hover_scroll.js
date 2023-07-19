@@ -1,3 +1,36 @@
+visible_animation = async (name) => {
+    $(name).css({opacity: 0, visibility: "visible", 'display': 'flex'}).animate({opacity: 1.0}, 200);
+    await sleep(200);
+}
+
+animation_lines = async () => {
+    const lines_dict = {
+        '.line1': ['27.6%', '#box-2'],
+        '.line2': ['60.8%', '#box-3'],
+        '.vert-line3': ['38vh', '#box-6'],
+        '.line4': ['60.8%', '#box-5'],
+        '.line5': ['27.6%', '#box-4'],
+    };
+
+    await visible_animation('#box-1');
+
+    for (var key in lines_dict) {
+        
+        $(key).css('background-color', '#6640B2')
+
+        if (key[1] == 'v') {
+            $(key).animate({'top': lines_dict[key][0]}, 500)
+        } else {
+            $(key).animate({'left': lines_dict[key][0]}, 500)
+        }
+        
+        await sleep(500);
+
+        await visible_animation(lines_dict[key][1]);
+        
+    }
+}
+
 $(async () => {
     var line = $('.under-line');
     var is_line_left = true;
@@ -7,6 +40,8 @@ $(async () => {
         'portf_link': '.portf-h1-div',
         'cont_link': 'footer'
     };
+
+    animation_lines();
 
     $(".header-link").hover(
         function () {
