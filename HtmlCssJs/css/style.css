@@ -166,9 +166,9 @@ span {
 .line1, .line2 {
     z-index: -1;
     position: relative;
-    top: 26vh;
+    top: 24.3vh;
     height: 1.5px;
-    width: 12%;
+    width: 11.2%;
     background-color: black;
 }
 
@@ -198,7 +198,7 @@ span {
     top: 30vh;
     width: 1.5px;
     left: 83%;
-    height: 8vh;
+    height: 6.8vh;
     background-color: white;
 }
 
@@ -207,7 +207,7 @@ span {
     position: relative;
     top: 50vh;
     height: 1.5px;
-    width: 12%;
+    width: 11.2%;
 }
 
 .all-portf {

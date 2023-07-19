@@ -1,13 +1,13 @@
 visible_animation = async (name) => {
     $(name).css({opacity: 0, visibility: "visible", 'display': 'flex'}).animate({opacity: 1.0}, 200);
-    await sleep(200);
+    await sleep(350);
 }
 
 animation_lines = async () => {
     const lines_dict = {
         '.line1': ['27.6%', '#box-2'],
         '.line2': ['60.8%', '#box-3'],
-        '.vert-line3': ['38vh', '#box-6'],
+        '.vert-line3': ['37vh', '#box-6'],
         '.line4': ['60.8%', '#box-5'],
         '.line5': ['27.6%', '#box-4'],
     };
