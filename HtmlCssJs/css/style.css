@@ -169,7 +169,6 @@ span {
     top: 30.3vh;
     height: 1.5px;
     width: 11.2%;
-    background-color: black;
 }
 
 .line1 {
@@ -286,7 +285,6 @@ footer a{
         margin: 5vh 6%;
     }
 
-
     .line1 {
         top: 41vh;
     }
@@ -323,5 +321,4 @@ footer a{
         width: 11.2%;
         top: 68vh;
     }
-    
 }

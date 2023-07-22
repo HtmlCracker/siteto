@@ -1,45 +1,76 @@
 visible_animation = async (name) => {
     $(name).css({opacity: 0, visibility: "visible", 'display': 'flex'}).animate({opacity: 1.0}, 200);
     await sleep(350);
+};
+
+const set_height_width = (dic, key) => {
+    if (dic[dic.length - 1] == 'h') {
+        $(key).css({'top': dic}, 500);
+    } else {
+        $(key).css({'left': dic}, 500);
+    }
 }
 
 animation_lines = async () => {
-    var lines_dict = {};
-    if ($('.line3').css('width') == '1.5px') {
-        lines_dict = {
-            '.line1': ['27.6%', '#box-2'],
-            '.line2': ['60.8%', '#box-3'],
-            '.line3': ['43vh', '#box-6'],
-            '.line4': ['60.8%', '#box-5'],
-            '.line5': ['27.6%', '#box-4'],
-        };
-    } else {
-        lines_dict = {
-            '.line1': ['45%', '#box-2'],
-            '.line2': ['54vh', '#box-4'],
-            '.line3': ['45%', '#box-3'],
-            '.line4': ['81vh', '#box-5'],
-            '.line5': ['45%', '#box-6'],
-        };
-    }
+    var lines_dict_big = {'.line1': ['27.6%', '30.3vh', '#box-2'],
+                          '.line2': ['60.8%', '30.3vh', '#box-3'],
+                          '.line3': ['43vh', '83%', '#box-6'],
+                          '.line4': ['60.8%', '56vh', '#box-5'],
+                          '.line5': ['27.6%', '56vh', '#box-4'],};
+
+    var lines_dict_small = {'.line1': ['45%', '41vh', '#box-2'],
+                            '.line2': ['54vh', '68.5%', '#box-4'],
+                            '.line3': ['45%', '68vh', '#box-3'],
+                            '.line4': ['81vh', '31.5%', '#box-5'],
+                            '.line5': ['45%', '94vh', '#box-6'],};
 
     await visible_animation('#box-1');
 
-    for (var key in lines_dict) {
-        
+    for (var key in lines_dict_big) {
         $(key).css('background-color', '#6640B2')
 
-        if ($(key).css('width') == '1.5px') {
-            $(key).animate({'top': lines_dict[key][0]}, 500)
+        if ($(window).width() > 955) {
+            if (lines_dict_big[key][0][lines_dict_big[key][0].length - 1] == 'h') {
+                $(key).animate({'top': lines_dict_big[key][0]}, 500);
+            } else {
+                $(key).animate({'left': lines_dict_big[key][0]}, 500);
+            }
+            
+            await sleep(500);
+
+            await visible_animation(lines_dict_big[key][2]);
+
         } else {
-            $(key).animate({'left': lines_dict[key][0]}, 500)
+            if (lines_dict_small[key][0][lines_dict_small[key][0].length - 1] == 'h') {
+                $(key).animate({'top': lines_dict_small[key][0]}, 500);
+            } else {
+                $(key).animate({'left': lines_dict_small[key][0]}, 500);
+            }
+
+            await sleep(500);
+
+            await visible_animation(lines_dict_small[key][2]);
         }
         
-        await sleep(500);
-
-        await visible_animation(lines_dict[key][1]);
-        
     }
+
+    $(window).resize(() => {
+        if ($(window).width() <= 955) {
+
+          for (var i in lines_dict_small) {
+            set_height_width(lines_dict_small[i][0], i);
+            set_height_width(lines_dict_small[i][1], i);
+            
+          }
+        } else {
+            for (var i in lines_dict_big) {
+                set_height_width(lines_dict_big[i][0], i);
+                set_height_width(lines_dict_big[i][1], i);
+                
+              }
+        }
+      });
+
 }
 
 $(async () => {
@@ -82,6 +113,7 @@ var count_portf = 0;
 
 $(window).scroll(async () =>{
     var scrolled = $(window).scrollTop();
+    var is_animated = false;
     const second_block_elem = [$('#first-block'), $('#second-block'), $('#third-block')];
 
     
