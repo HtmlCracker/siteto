@@ -5,9 +5,9 @@ visible_animation = async (name) => {
 
 const set_height_width = (dic, key) => {
     if (dic[dic.length - 1] == 'h') {
-        $(key).css({'top': dic}, 500);
+        $(key).css({'top': dic});
     } else {
-        $(key).css({'left': dic}, 500);
+        $(key).css({'left': dic});
     }
 }
 
