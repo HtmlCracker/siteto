@@ -78,9 +78,9 @@ span {
 .about {
     position: relative;
     z-index: -1;
-    top: calc(13.5vh - 33px);
+    top: calc(13.5vh - 35px);
     margin-left: 30%;
-    font-size: 33px;
+    font-size: 30px;
 }
 
 .img-p {
